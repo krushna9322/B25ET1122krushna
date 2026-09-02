@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int add(int a, int b) {
+    return a + b;
+}
+double add(double a, double b) {
+    return a + b;
+}
+int main() {
+   
+    int intSum = add(5, 10);
+    cout << "Sum of integers (5 + 10): " << intSum << endl;
+
+    double floatSum = add(5.5, 10.2);
+    cout << "Sum of floats (5.5 + 10.2): " << floatSum << endl;
+    return 0;
+}
+
+Output:-
+
+Sum of integers (5 + 10): 15
+Sum of floats (5.5 + 10.2): 15.7
+
+
+=== Code Execution Successful ===
