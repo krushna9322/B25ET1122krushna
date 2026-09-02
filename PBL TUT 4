@@ -1,34 +1,31 @@
 #include <iostream>
-
+using namespace std;
 class Complex {
 public:
-    int r, i; 
+    int r, i;
 };
 int main() {
     Complex c1, c2, sum;
 
-    std::cout << "Enter 1st number (real and imag):\n";
-    std::cin >> c1.r >> c1.i;
+    cout << "Enter 1st number (real and imag):\n";
+    cin >> c1.r >> c1.i;
 
-    std::cout << "Enter 2nd number (real and imag):\n";
-    std::cin >> c2.r >> c2.i;
+    cout << "Enter 2nd number (real and imag):\n";
+    cin >> c2.r >> c2.i;
 
     sum.r = c1.r + c2.r;
     sum.i = c1.i + c2.i;
-
-    std::cout << "Sum: " << sum.r << " + " << sum.i << "i\n";
-
+    cout << "Sum: " << sum.r << " + " << sum.i << "i\n";
     return 0;
 }
-
-OUTPUT:-
+  
 Enter 1st number (real and imag):
-45
 78
+45
 Enter 2nd number (real and imag):
-69
 12
-Sum: 114 + 90i
+6
+Sum: 90 + 51i
 
 
 === Code Execution Successful ===
