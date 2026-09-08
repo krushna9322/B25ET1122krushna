@@ -38,14 +38,4 @@ int main() {
     displayArray(arr, n);
     return 0;
 }
-output:-
-Enter size: 3
-Enter 3 elements:
-45
-78
-56
-Sorted: 45 56 78 
-
-
-=== Code Execution Successful ===
 
