@@ -19,13 +19,3 @@ int main() {
     return 0;
 }
   
-Enter 1st number (real and imag):
-78
-45
-Enter 2nd number (real and imag):
-12
-6
-Sum: 90 + 51i
-
-
-=== Code Execution Successful ===
