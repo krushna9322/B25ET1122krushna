@@ -18,10 +18,3 @@ int main() {
     return 0;
 }
 
-Output:-
-
-Sum of integers (5 + 10): 15
-Sum of floats (5.5 + 10.2): 15.7
-
-
-=== Code Execution Successful ===
