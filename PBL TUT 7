@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+                                   // Creating a class named String
+class String
+{
+private:
+                                          // Private data member
+    char *str;
+public:
+                                            // Default Constructor
+                                                       // It is called automatically when the object is created
+    String()
+    {
+                                                    // Allocating memory for 100 characters
+        str = new char[100];
+                                                     // Initializing the string as empty
+        str[0] = '\0';
+    }
+                                                           // Accept() function
+                                                        // Used to accept a string from the user
+    void Accept()
+    {
+        cout << "Enter a string: ";
+                                                         // Accepting the string including spaces
+        cin.getline(str, 100);
+    }
+                                                              // Display() function
+                                                         // Used to display the entered string
+    void Display()
+    {
+        cout << "String is: " << str << endl;
+    }
+                                                                  // Destructor
+                                                           // It is called automatically when the object is destroyed
+    ~String()
+    {
+                                                          // Releasing the dynamically allocated memory
+        delete[] str;
+    }
+};
+                                                 // Main function
+int main()
+{
+                                  // Creating an object of String class
+    String s;
+                                        // Calling Accept() function
+    s.Accept();
+                                     // Calling Display() function
+    s.Display();
+                                     // End of program
+    return 0;
+}
