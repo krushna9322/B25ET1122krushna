@@ -1,0 +1,60 @@
+#include <iostream>              // Used for input and output
+using namespace std;             // Allows us to use cout and cin directly
+// First Base Class
+class BasicInfo                  // Creates the BasicInfo class
+{
+protected:                       // Protected members can be used in derived class
+    int id;                      // Stores employee ID
+    string name;                 // Stores employee name
+    int age;                     // Stores employee age
+public:                          // Public members can be accessed outside the class
+    void get_basic()             // Function to accept basic information
+    {
+        cout << "Enter Employee ID: ";   // Displays message for ID
+        cin >> id;                       // Takes employee ID from user
+
+        cout << "Enter Name: ";          // Displays message for name
+        cin >> name;                     // Takes employee name from user
+
+        cout << "Enter Age: ";           // Displays message for age
+        cin >> age;                      // Takes employee age from user
+    }
+};
+// Second Base Class
+class DepartmentInfo             // Creates the DepartmentInfo class
+{
+protected:                        // Protected members can be used in derived class
+    string department;            // Stores department name
+    string designation;           // Stores employee designation
+public:                           // Public members can be accessed outside the class
+    void get_department()         // Function to accept department information
+    {
+        cout << "Enter Department: ";    // Displays message for department
+        cin >> department;               // Takes department from user
+        cout << "Enter Designation: ";   // Displays message for designation
+        cin >> designation;              // Takes designation from user
+    }
+};
+// Derived Class
+class Employee : public BasicInfo, public DepartmentInf             // Employee inherits from both BasicInfo and DepartmentInfo
+                                                                 // Therefore, this is called Multiple Inheritance{
+public:                           // Public members of Employee class
+    void display()                // Function to display employee information
+    {
+        cout << "\n--- Employee Details ---" << endl;              // Displays the heading
+        cout << "Employee ID: " << id << endl;                      // Displays employee ID
+        cout << "Name: " << name << endl;                         // Displays employee name
+        cout << "Age: " << age << endl;                             // Displays employee age
+        cout << "Department: " << department << endl;                     // Displays department
+        cout << "Designation: " << designation << end;                    // Displays designation
+    }
+};
+// Main Function
+int main()                        // Program execution starts from main()
+{
+    Employee e;                   // Creates an object 'e' of Employee class
+    e.get_basic();                // Calls get_basic() function of BasicInfo
+    e.get_department();           // Calls get_department() function of DepartmentInfo
+    e.display();                  // Calls display() function of Employee
+    return 0;                     // Ends the program successfully
+}
