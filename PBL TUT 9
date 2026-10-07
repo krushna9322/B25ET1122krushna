@@ -1,0 +1,44 @@
+#include <iostream>                        // Include input-output library
+using namespace std;                         // Use standard namespace
+// Base class
+class Employee
+{
+public:                                     // Public members of Employee class
+    // Virtual function
+    virtual void display()
+    {
+        cout << "Employee details" << endl;               // Display employee details
+    }
+};
+// Derived class 1
+class Manager : public Employee
+{
+public:                                              // Public members of Manager class
+    // Override display function
+    void display()
+    {
+        cout << "Manager Employee" << endl;              // Display manager information
+    }
+};
+// Derived class 2
+class Developer : public Employee
+{
+public:                                            // Public members of Developer class
+                                                    // Override display function
+ void display()
+    {
+        cout << "Developer Employee" << endl;                // Display developer information
+    }
+};
+// Main function
+int main()
+{
+    Manager m;                   // Create object of Manager class
+    Developer d;                 // Create object of Developer class
+    Employee *p;                 // Create pointer of base class
+    p = &m;                      // Store address of Manager object in pointer
+    p->display();                // Call Manager's display() function
+    p = &d;                      // Store address of Developer object in pointer
+    p->display();                // Call Developer's display() function
+    return 0;                   // End the program
+}
