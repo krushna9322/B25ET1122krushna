@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+                                       // Declare two integer variables
+    int a = 10, b = 0;
+                                           // Display a message before try block
+    cout << "Before try\n";
+    try
+    {
+                                               // Code that may cause an exception
+        cout << "Inside try\n";
+                                               // Check whether the divisor is zero
+        if (b == 0)
+        {
+                                                  // Throw an exception if divisor is zero
+            throw b;
+        }
+                                                       // Perform division if divisor is not zero
+        cout << "Division = " << a / b << "\n";
+    }
+    catch (int x)
+    {
+                                                               // Handle the division-by-zero exception
+        cout << "Exception Caught: Division by zero\n";
+    }
+                                       // This statement executes after catch block
+    cout << "After catch\n";
+    return 0;                                 // End the program
+}
