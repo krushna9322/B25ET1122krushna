@@ -1,0 +1,19 @@
+#include <iostream>  
+using namespace std;     // Use the standard namespace
+
+namespace Addition       // Declare Addition namespace
+{
+    int a = 10, b = 20;             // Declare and initialize variables
+}                                     // End of Addition namespace
+namespace subtraction             // Declare subtraction namespace
+{
+    int a = 10, b = 20;                // Declare and initialize variables
+}                       // End of subtraction namespace
+int main()               // Main function starts
+{
+    cout << "Addition = "                               // Display addition message
+         << Addition::a + Addition::b << endl;           // Calculate and display addition
+    cout << "Subtraction = "                         // Display subtraction message
+         << subtraction::a - subtraction::b << endl;       // Calculate and display subtraction
+    return 0;                                             // End the program successfully
+}  
